@@ -483,31 +483,28 @@
               <tr><th>地域</th><th>都道府県</th><th>通常送料</th><th>冬期送料</th></tr>
             </thead>
             <tbody>
-              <tr><td rowspan="1">北海道</td><td>北海道</td><td>1,180円</td><td>1,880円（11月〜4月）</td></tr>
-              <tr class="area-header"><td rowspan="6">東北</td><td>青森県</td><td>580円</td><td>-</td></tr>
-              <tr><td>岩手県</td><td>580円</td><td>-</td></tr>
-              <tr><td>宮城県</td><td>580円</td><td>-</td></tr>
-              <tr><td>秋田県</td><td>580円</td><td>-</td></tr>
-              <tr><td>山形県</td><td>580円</td><td>-</td></tr>
-              <tr><td>福島県</td><td>580円</td><td>-</td></tr>
+              <tr><td rowspan="1">北海道</td><td>北海道</td><td>980円</td><td>1,680円（11月〜4月）</td></tr>
+              <tr class="area-header"><td rowspan="6">東北</td><td>宮城県</td><td>500円</td><td>-</td></tr>
+              <tr><td>青森県・岩手県</td><td>500円</td><td>-</td></tr>
+              <tr><td>秋田県</td><td>500円</td><td>-</td></tr>
+              <tr><td>山形県</td><td>500円</td><td>-</td></tr>
+              <tr><td>福島県</td><td>500円</td><td>-</td></tr>
               <tr class="area-header"><td rowspan="7">関東</td><td>茨城県</td><td>580円</td><td>-</td></tr>
-              <tr><td>栃木県</td><td>500円</td><td>-</td></tr>
+              <tr><td>栃木県</td><td>580円</td><td>-</td></tr>
               <tr><td>群馬県</td><td>580円</td><td>-</td></tr>
               <tr><td>埼玉県</td><td>580円</td><td>-</td></tr>
               <tr><td>千葉県</td><td>580円</td><td>-</td></tr>
               <tr><td>東京都</td><td>580円</td><td>-</td></tr>
               <tr><td>神奈川県</td><td>580円</td><td>-</td></tr>
-              <tr class="area-header"><td rowspan="3">信越・北陸</td><td>新潟県・富山県</td><td>580円</td><td>-</td></tr>
-              <tr><td>石川県・福井県</td><td>580円</td><td>-</td></tr>
-              <tr><td>山梨県・長野県</td><td>580円</td><td>-</td></tr>
-              <tr class="area-header"><td rowspan="2">東海</td><td>岐阜県・静岡県</td><td>580円</td><td>-</td></tr>
-              <tr><td>愛知県・三重県</td><td>580円</td><td>-</td></tr>
-              <tr class="area-header"><td rowspan="2">関西</td><td>滋賀・京都・大阪・兵庫・奈良</td><td>680円</td><td>-</td></tr>
+              <tr class="area-header"><td rowspan="2">信越・北陸</td><td>新潟県・山梨県・長野県</td><td>580円</td><td>-</td></tr>
+              <tr><td>富山県・石川県・福井県</td><td>680円</td><td>-</td></tr>
+              <tr class="area-header"><td rowspan="1">東海</td><td>岐阜・静岡・愛知・三重</td><td>680円</td><td>-</td></tr>
+              <tr class="area-header"><td rowspan="2">関西</td><td>滋賀・京都・大阪・兵庫・奈良</td><td>780円</td><td>-</td></tr>
               <tr><td>和歌山県</td><td>880円</td><td>-</td></tr>
-              <tr class="area-header"><td rowspan="1">中国</td><td>鳥取・島根・岡山・広島・山口</td><td>780円</td><td>-</td></tr>
-              <tr class="area-header"><td rowspan="1">四国</td><td>徳島・香川・愛媛・高知</td><td>780円</td><td>-</td></tr>
-              <tr class="area-header"><td rowspan="1">九州</td><td>福岡〜鹿児島</td><td>980円</td><td>1,680円（12月〜4月）</td></tr>
-              <tr class="area-header"><td rowspan="1">沖縄</td><td>沖縄県</td><td>1,180円</td><td>1,880円（12月〜4月）</td></tr>
+              <tr class="area-header"><td rowspan="1">中国</td><td>鳥取・島根・岡山・広島・山口</td><td>880円</td><td>-</td></tr>
+              <tr class="area-header"><td rowspan="1">四国</td><td>徳島・香川・愛媛・高知</td><td>880円</td><td>-</td></tr>
+              <tr class="area-header"><td rowspan="1">九州</td><td>福岡〜鹿児島</td><td>1,080円</td><td>1,780円（12月〜4月）</td></tr>
+              <tr class="area-header"><td rowspan="1">沖縄</td><td>沖縄県</td><td>1,280円</td><td>1,980円（12月〜4月）</td></tr>
             </tbody>
           </table>
         </div>
@@ -1067,35 +1064,33 @@
     // =============================================
     // 送料計算
     // =============================================
+    // 宮城県発の送料（ヤマト運輸 宅急便）
     const SHIPPING_RATES = {
-      '北海道': { normal: 1180, winter: 1880, winterMonths: [11,12,1,2,3,4] },
-      '青森県': { normal: 580 }, '岩手県': { normal: 580 }, '宮城県': { normal: 580 },
-      '秋田県': { normal: 580 }, '山形県': { normal: 580 }, '福島県': { normal: 580 },
-      '茨城県': { normal: 580 }, '栃木県': { normal: 500 }, '群馬県': { normal: 580 },
+      '北海道': { normal: 980, winter: 1680, winterMonths: [11,12,1,2,3,4], noFreeShipping: true },
+      '青森県': { normal: 500 }, '岩手県': { normal: 500 }, '宮城県': { normal: 500 },
+      '秋田県': { normal: 500 }, '山形県': { normal: 500 }, '福島県': { normal: 500 },
+      '茨城県': { normal: 580 }, '栃木県': { normal: 580 }, '群馬県': { normal: 580 },
       '埼玉県': { normal: 580 }, '千葉県': { normal: 580 }, '東京都': { normal: 580 },
       '神奈川県': { normal: 580 },
-      '新潟県': { normal: 580 }, '富山県': { normal: 580 }, '石川県': { normal: 580 },
-      '福井県': { normal: 580 }, '山梨県': { normal: 580 }, '長野県': { normal: 580 },
-      '岐阜県': { normal: 580 }, '静岡県': { normal: 580 }, '愛知県': { normal: 580 },
-      '三重県': { normal: 580 },
-      '滋賀県': { normal: 680 }, '京都府': { normal: 680 }, '大阪府': { normal: 680 },
-      '兵庫県': { normal: 680 }, '奈良県': { normal: 680 }, '和歌山県': { normal: 880 },
-      '鳥取県': { normal: 780 }, '島根県': { normal: 780 }, '岡山県': { normal: 780 },
-      '広島県': { normal: 780 }, '山口県': { normal: 780 },
-      '徳島県': { normal: 780 }, '香川県': { normal: 780 }, '愛媛県': { normal: 780 },
-      '高知県': { normal: 780 },
-      '福岡県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
-      '佐賀県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
-      '長崎県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
-      '熊本県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
-      '大分県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
-      '宮崎県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
-      '鹿児島県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
-      '沖縄県': { normal: 1180, winter: 1880, winterMonths: [12,1,2,3,4], noFreeShipping: true }
+      '新潟県': { normal: 580 }, '山梨県': { normal: 580 }, '長野県': { normal: 580 },
+      '富山県': { normal: 680 }, '石川県': { normal: 680 }, '福井県': { normal: 680 },
+      '岐阜県': { normal: 680 }, '静岡県': { normal: 680 }, '愛知県': { normal: 680 },
+      '三重県': { normal: 680 },
+      '滋賀県': { normal: 780 }, '京都府': { normal: 780 }, '大阪府': { normal: 780 },
+      '兵庫県': { normal: 780 }, '奈良県': { normal: 780 }, '和歌山県': { normal: 880 },
+      '鳥取県': { normal: 880 }, '島根県': { normal: 880 }, '岡山県': { normal: 880 },
+      '広島県': { normal: 880 }, '山口県': { normal: 880 },
+      '徳島県': { normal: 880 }, '香川県': { normal: 880 }, '愛媛県': { normal: 880 },
+      '高知県': { normal: 880 },
+      '福岡県': { normal: 1080, winter: 1780, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '佐賀県': { normal: 1080, winter: 1780, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '長崎県': { normal: 1080, winter: 1780, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '熊本県': { normal: 1080, winter: 1780, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '大分県': { normal: 1080, winter: 1780, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '宮崎県': { normal: 1080, winter: 1780, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '鹿児島県': { normal: 1080, winter: 1780, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '沖縄県': { normal: 1280, winter: 1980, winterMonths: [12,1,2,3,4], noFreeShipping: true }
     };
-
-    // 北海道も送料無料対象外
-    SHIPPING_RATES['北海道'].noFreeShipping = true;
 
     let detectedPrefecture = '';
 
