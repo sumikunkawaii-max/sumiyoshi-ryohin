@@ -30,10 +30,10 @@
         <ul>
           <li><a href="#top">トップ</a></li>
           <li><a href="#products">商品一覧</a></li>
-          <li><a href="#about">当店について</a></li>
           <li><a href="#merit">デュビアとは</a></li>
-          <li><a href="#shipping">発送方法</a></li>
-          <li><a href="#faq">よくある質問</a></li>
+          <li><a href="#about">当店について</a></li>
+          <li><a href="#guide">ご利用ガイド</a></li>
+          <li><a href="#reviews">お客様の声</a></li>
         </ul>
       </nav>
       <!-- カートボタン（ヘッダー） -->
@@ -430,6 +430,179 @@
     </div>
   </section>
 
+  <!-- ========================================
+       ご利用ガイド（送料・お支払い・保証）
+       ======================================== -->
+  <section class="section guide-section" id="guide">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">GUIDE</span>
+        <h2 class="section-title">ご利用ガイド</h2>
+      </div>
+
+      <div class="guide-tabs">
+        <button class="guide-tab active" data-tab="tab-shipping">送料</button>
+        <button class="guide-tab" data-tab="tab-payment">お支払い方法</button>
+        <button class="guide-tab" data-tab="tab-guarantee">保証・返品</button>
+      </div>
+
+      <!-- 送料タブ -->
+      <div class="guide-content active" id="tab-shipping">
+        <div class="guide-notice">
+          <div class="guide-notice-highlight">
+            <strong>5,000円以上のお買い上げで送料無料</strong>
+            <p>※北海道・沖縄・九州・離島除く<br>※冬期期間はその時の気温により前後する場合がございます</p>
+          </div>
+        </div>
+
+        <div class="shipping-table-wrap">
+          <table class="shipping-table">
+            <thead>
+              <tr><th>地域</th><th>都道府県</th><th>通常送料</th><th>冬期送料</th></tr>
+            </thead>
+            <tbody>
+              <tr><td rowspan="1">北海道</td><td>北海道</td><td>1,180円</td><td>1,880円（11月〜4月）</td></tr>
+              <tr class="area-header"><td rowspan="6">東北</td><td>青森県</td><td>580円</td><td>-</td></tr>
+              <tr><td>岩手県</td><td>580円</td><td>-</td></tr>
+              <tr><td>宮城県</td><td>580円</td><td>-</td></tr>
+              <tr><td>秋田県</td><td>580円</td><td>-</td></tr>
+              <tr><td>山形県</td><td>580円</td><td>-</td></tr>
+              <tr><td>福島県</td><td>580円</td><td>-</td></tr>
+              <tr class="area-header"><td rowspan="7">関東</td><td>茨城県</td><td>580円</td><td>-</td></tr>
+              <tr><td>栃木県</td><td>500円</td><td>-</td></tr>
+              <tr><td>群馬県</td><td>580円</td><td>-</td></tr>
+              <tr><td>埼玉県</td><td>580円</td><td>-</td></tr>
+              <tr><td>千葉県</td><td>580円</td><td>-</td></tr>
+              <tr><td>東京都</td><td>580円</td><td>-</td></tr>
+              <tr><td>神奈川県</td><td>580円</td><td>-</td></tr>
+              <tr class="area-header"><td rowspan="3">信越・北陸</td><td>新潟県・富山県</td><td>580円</td><td>-</td></tr>
+              <tr><td>石川県・福井県</td><td>580円</td><td>-</td></tr>
+              <tr><td>山梨県・長野県</td><td>580円</td><td>-</td></tr>
+              <tr class="area-header"><td rowspan="2">東海</td><td>岐阜県・静岡県</td><td>580円</td><td>-</td></tr>
+              <tr><td>愛知県・三重県</td><td>580円</td><td>-</td></tr>
+              <tr class="area-header"><td rowspan="2">関西</td><td>滋賀・京都・大阪・兵庫・奈良</td><td>680円</td><td>-</td></tr>
+              <tr><td>和歌山県</td><td>880円</td><td>-</td></tr>
+              <tr class="area-header"><td rowspan="1">中国</td><td>鳥取・島根・岡山・広島・山口</td><td>780円</td><td>-</td></tr>
+              <tr class="area-header"><td rowspan="1">四国</td><td>徳島・香川・愛媛・高知</td><td>780円</td><td>-</td></tr>
+              <tr class="area-header"><td rowspan="1">九州</td><td>福岡〜鹿児島</td><td>980円</td><td>1,680円（12月〜4月）</td></tr>
+              <tr class="area-header"><td rowspan="1">沖縄</td><td>沖縄県</td><td>1,180円</td><td>1,880円（12月〜4月）</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- お支払い方法タブ -->
+      <div class="guide-content" id="tab-payment">
+        <div class="payment-methods">
+          <div class="payment-method-card">
+            <div class="payment-method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+            <div>
+              <h4>クレジットカード払い</h4>
+              <p>VISA・master・JCB・AMEX・Diners Clubがご利用いただけます。</p>
+              <div class="card-brands">
+                <span>VISA</span><span>master</span><span>JCB</span><span>AMEX</span><span>Diners</span>
+              </div>
+            </div>
+          </div>
+          <div class="payment-method-card">
+            <div class="payment-method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8C20.9996 7.64928 20.9071 7.30481 20.7315 7.00116C20.556 6.69752 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69752 3.26846 7.00116C3.09294 7.30481 3.00036 7.64928 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.998 12 21.998C12.3511 21.998 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z"/></svg>
+            </div>
+            <div>
+              <h4>代引き（後払い）</h4>
+              <p>別途代引き手数料がかかります。商品到着時にお支払いください。</p>
+            </div>
+          </div>
+          <div class="payment-method-card">
+            <div class="payment-method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div>
+              <h4>銀行振り込み（先払い）</h4>
+              <p>ご注文後1週間以内のお振り込みをお願いします。お振り込みが確認できない場合はキャンセル扱いとなります。振り込み手数料はお客様ご負担でお願いします。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 保証・返品タブ -->
+      <div class="guide-content" id="tab-guarantee">
+        <div class="guarantee-list">
+          <div class="guarantee-item">
+            <h4>死着保証</h4>
+            <p>配送時にご購入の匹数の<strong>10%分多く</strong>死着保障分として発送しております。</p>
+            <p class="guarantee-example">例：100匹ご購入の場合は死着保障分10匹追加の110匹を発送</p>
+            <p>ご購入額の10%を超える死着だった場合は保証させて頂きますので、お手数ですがお問い合わせ下さい。現在のところ死着のご報告は頂いておりませんのでご安心下さいませ。</p>
+          </div>
+          <div class="guarantee-item">
+            <h4>返品について</h4>
+            <p>取り扱っている商品の特性上、返品を承ることができません。予めご了承下さい。</p>
+          </div>
+          <div class="guarantee-item">
+            <h4>キャンセルについて</h4>
+            <p>商品発送前であれば、キャンセルが可能です。銀行振り込みでのお支払いは、注文後7日以内に入金が確認できませんと、自動的にキャンセル扱いになります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お客様の声 -->
+  <section class="section reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">REVIEWS</span>
+        <h2 class="section-title">お客様の声</h2>
+        <p class="section-desc">当店でデュビアをご購入いただいたお客様からの声</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="review-text">Sサイズ100匹を購入しました。全匹元気に到着し、レオパも喜んで食べてくれました。オーガニック飼育ということで安心して与えられます。リピート確定です！</p>
+          <div class="review-meta">
+            <span class="review-author">レオパ飼育歴3年 K.T様</span>
+            <span class="review-product">デュビア Sサイズ 100匹</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="review-text">梱包がとても丁寧で、隠れ家とご飯まで同梱されていて感動しました。デュビアもぷりぷりで大きさも揃っていて大満足。他店で買っていたのが馬鹿らしくなりました。</p>
+          <div class="review-meta">
+            <span class="review-author">フトアゴ飼育 M.S様</span>
+            <span class="review-product">デュビア Mサイズ 200匹</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="review-text">SSサイズをヤモリのベビーに与えています。サイズが均一で非常に使いやすいです。死着保証もついていて安心して注文できます。迅速な発送もありがたいです。</p>
+          <div class="review-meta">
+            <span class="review-author">ヤモリ多頭飼い A.N様</span>
+            <span class="review-product">デュビア SSサイズ 200匹</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+          </div>
+          <p class="review-text">Lサイズを初めて購入。大型のトカゲ用ですが、食いつきが全然違います。他の餌昆虫と比べて臭いが少ないのも助かります。次回はまとめ買いしたいと思います。</p>
+          <div class="review-meta">
+            <span class="review-author">爬虫類ブリーダー Y.H様</span>
+            <span class="review-product">デュビア Lサイズ 50匹</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- フッター -->
   <footer class="footer">
     <div class="container">
@@ -444,14 +617,15 @@
             <li><a href="#top">トップ</a></li>
             <li><a href="#products">商品一覧</a></li>
             <li><a href="#about">当店について</a></li>
-            <li><a href="#shipping">発送方法</a></li>
+            <li><a href="#reviews">お客様の声</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h4>ご案内</h4>
           <ul>
+            <li><a href="#guide">送料・お支払い</a></li>
+            <li><a href="#shipping">発送方法</a></li>
             <li><a href="#faq">よくある質問</a></li>
-            <li><a href="#shipping">配送について</a></li>
           </ul>
         </div>
       </div>
@@ -557,9 +731,9 @@
           <label for="orderPayment">お支払い方法 <span class="required">必須</span></label>
           <select id="orderPayment" name="お支払い方法" required>
             <option value="">選択してください</option>
-            <option value="クレジットカード">クレジットカード</option>
-            <option value="銀行振込">銀行振込</option>
-            <option value="PayPay">PayPay</option>
+            <option value="クレジットカード">クレジットカード（VISA/master/JCB/AMEX/Diners）</option>
+            <option value="代引き">代引き（後払い）</option>
+            <option value="銀行振込">銀行振り込み（先払い）</option>
           </select>
           <p class="payment-hint" id="paymentHint"></p>
         </div>
@@ -709,30 +883,64 @@
     // =============================================
     function openOrderModal() {
       closeCart();
+      detectedPrefecture = '';
+      renderOrderSummary();
 
-      // 注文内容をまとめる
+      document.getElementById('orderModal').classList.add('open');
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function renderOrderSummary() {
       const summaryEl = document.getElementById('orderSummary');
       let summaryHTML = '<h4 class="form-section-title">ご注文内容</h4><div class="order-items-list">';
       let orderText = '';
-      let total = 0;
+      let subtotal = 0;
 
       cart.forEach(item => {
-        const subtotal = item.price * item.count;
-        total += subtotal;
+        const itemTotal = item.price * item.count;
+        subtotal += itemTotal;
         summaryHTML +=
           '<div class="order-item-row">' +
             '<span class="order-item-name">' + item.name + ' ' + item.qty + (item.count > 1 ? ' x' + item.count : '') + '</span>' +
-            '<span class="order-item-price">' + subtotal.toLocaleString() + '円</span>' +
+            '<span class="order-item-price">' + itemTotal.toLocaleString() + '円</span>' +
           '</div>';
-        orderText += item.name + ' ' + item.qty + ' x' + item.count + ' = ' + subtotal.toLocaleString() + '円\n';
+        orderText += item.name + ' ' + item.qty + ' x' + item.count + ' = ' + itemTotal.toLocaleString() + '円\n';
       });
 
+      // 送料計算
+      let shippingFee = null;
+      let shippingText = '';
+      if (detectedPrefecture) {
+        shippingFee = getShippingFee(detectedPrefecture, subtotal);
+        if (shippingFee !== null) {
+          if (shippingFee === 0) {
+            shippingText = '無料';
+          } else {
+            shippingText = shippingFee.toLocaleString() + '円';
+          }
+          summaryHTML +=
+            '<div class="order-item-row order-shipping-row">' +
+              '<span class="order-item-name">送料（' + detectedPrefecture + '）</span>' +
+              '<span class="order-item-price">' + shippingText + '</span>' +
+            '</div>';
+          orderText += '送料（' + detectedPrefecture + '）: ' + shippingText + '\n';
+        }
+      } else {
+        summaryHTML +=
+          '<div class="order-item-row order-shipping-row">' +
+            '<span class="order-item-name">送料</span>' +
+            '<span class="order-item-price order-shipping-pending">住所入力後に計算</span>' +
+          '</div>';
+      }
+
+      const grandTotal = subtotal + (shippingFee || 0);
       summaryHTML +=
         '<div class="order-total-row">' +
-          '<span>合計（税込）</span>' +
-          '<span class="order-total-price">' + total.toLocaleString() + '円</span>' +
+          '<span>合計（税込・送料込）</span>' +
+          '<span class="order-total-price">' + grandTotal.toLocaleString() + '円</span>' +
         '</div></div>';
-      orderText += '---\n合計: ' + total.toLocaleString() + '円（税込）';
+      orderText += '---\n合計: ' + grandTotal.toLocaleString() + '円（税込・送料込）';
 
       summaryEl.innerHTML = summaryHTML;
       document.getElementById('orderDetails').value = orderText;
@@ -740,10 +948,6 @@
       // 現在のページURLをサンクスページに設定
       const currentUrl = window.location.href.split('#')[0];
       document.getElementById('formNext').value = currentUrl + '?ordered=true';
-
-      document.getElementById('orderModal').classList.add('open');
-      document.getElementById('modalOverlay').classList.add('open');
-      document.body.style.overflow = 'hidden';
     }
 
     function closeOrderModal() {
@@ -767,6 +971,9 @@
         document.getElementById('orderAddress').value = address;
         hint.textContent = '住所を自動入力しました';
         hint.className = 'zip-hint zip-success';
+        // 都道府県を検出して送料を再計算
+        detectedPrefecture = extractPrefecture(address);
+        renderOrderSummary();
         // 建物名の入力欄にフォーカス
         document.getElementById('orderAddress2').focus();
       } else {
@@ -817,27 +1024,97 @@
     });
 
     // =============================================
+    // 送料計算
+    // =============================================
+    const SHIPPING_RATES = {
+      '北海道': { normal: 1180, winter: 1880, winterMonths: [11,12,1,2,3,4] },
+      '青森県': { normal: 580 }, '岩手県': { normal: 580 }, '宮城県': { normal: 580 },
+      '秋田県': { normal: 580 }, '山形県': { normal: 580 }, '福島県': { normal: 580 },
+      '茨城県': { normal: 580 }, '栃木県': { normal: 500 }, '群馬県': { normal: 580 },
+      '埼玉県': { normal: 580 }, '千葉県': { normal: 580 }, '東京都': { normal: 580 },
+      '神奈川県': { normal: 580 },
+      '新潟県': { normal: 580 }, '富山県': { normal: 580 }, '石川県': { normal: 580 },
+      '福井県': { normal: 580 }, '山梨県': { normal: 580 }, '長野県': { normal: 580 },
+      '岐阜県': { normal: 580 }, '静岡県': { normal: 580 }, '愛知県': { normal: 580 },
+      '三重県': { normal: 580 },
+      '滋賀県': { normal: 680 }, '京都府': { normal: 680 }, '大阪府': { normal: 680 },
+      '兵庫県': { normal: 680 }, '奈良県': { normal: 680 }, '和歌山県': { normal: 880 },
+      '鳥取県': { normal: 780 }, '島根県': { normal: 780 }, '岡山県': { normal: 780 },
+      '広島県': { normal: 780 }, '山口県': { normal: 780 },
+      '徳島県': { normal: 780 }, '香川県': { normal: 780 }, '愛媛県': { normal: 780 },
+      '高知県': { normal: 780 },
+      '福岡県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '佐賀県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '長崎県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '熊本県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '大分県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '宮崎県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '鹿児島県': { normal: 980, winter: 1680, winterMonths: [12,1,2,3,4], noFreeShipping: true },
+      '沖縄県': { normal: 1180, winter: 1880, winterMonths: [12,1,2,3,4], noFreeShipping: true }
+    };
+
+    // 北海道も送料無料対象外
+    SHIPPING_RATES['北海道'].noFreeShipping = true;
+
+    let detectedPrefecture = '';
+
+    function getShippingFee(prefecture, subtotal) {
+      const rate = SHIPPING_RATES[prefecture];
+      if (!rate) return null;
+
+      const month = new Date().getMonth() + 1;
+      let fee = rate.normal;
+      if (rate.winter && rate.winterMonths && rate.winterMonths.includes(month)) {
+        fee = rate.winter;
+      }
+
+      // 5000円以上で送料無料（対象外地域を除く）
+      if (subtotal >= 5000 && !rate.noFreeShipping) {
+        fee = 0;
+      }
+
+      return fee;
+    }
+
+    function extractPrefecture(address) {
+      const match = address.match(/^(北海道|東京都|大阪府|京都府|.{2,3}県)/);
+      return match ? match[1] : '';
+    }
+
+    // =============================================
     // 支払い方法の選択で案内を表示
     // =============================================
     document.getElementById('orderPayment').addEventListener('change', function() {
       const hint = document.getElementById('paymentHint');
       switch (this.value) {
         case 'クレジットカード':
-          hint.textContent = 'ご注文確定後、決済用リンクをメールでお送りいたします。';
+          hint.textContent = 'ご注文確定後、カード決済用のリンクをメールでお送りいたします。';
+          hint.className = 'payment-hint payment-info';
+          break;
+        case '代引き':
+          hint.textContent = '商品到着時に配送員へお支払いください。別途代引き手数料がかかります。';
           hint.className = 'payment-hint payment-info';
           break;
         case '銀行振込':
-          hint.textContent = 'ご注文確定後、振込先をメールでお送りいたします。';
-          hint.className = 'payment-hint payment-info';
-          break;
-        case 'PayPay':
-          hint.textContent = 'ご注文確定後、PayPay送金先をメールでお送りいたします。';
+          hint.textContent = 'ご注文確定後、振込先をメールでお送りいたします。1週間以内のお振込をお願いします。';
           hint.className = 'payment-hint payment-info';
           break;
         default:
           hint.textContent = '';
           hint.className = 'payment-hint';
       }
+    });
+
+    // =============================================
+    // ご利用ガイド タブ切替
+    // =============================================
+    document.querySelectorAll('.guide-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.guide-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.guide-content').forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById(this.dataset.tab).classList.add('active');
+      });
     });
 
     // 注文完了後のリダイレクト確認

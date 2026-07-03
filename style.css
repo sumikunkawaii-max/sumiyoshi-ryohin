@@ -1509,6 +1509,322 @@ ul {
   font-weight: 500;
 }
 
+/* =============================================
+   ご利用ガイド（タブ）
+   ============================================= */
+.guide-section {
+  background: var(--color-bg-warm);
+}
+
+.guide-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 36px;
+  background: var(--color-white);
+  border-radius: 50px;
+  padding: 4px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.guide-tab {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  border-radius: 50px;
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.guide-tab.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.guide-tab:hover:not(.active) {
+  color: var(--color-primary);
+}
+
+.guide-content {
+  display: none;
+}
+
+.guide-content.active {
+  display: block;
+}
+
+.guide-notice {
+  margin-bottom: 28px;
+}
+
+.guide-notice-highlight {
+  background: linear-gradient(135deg, #FFF8E1, #FFF3C4);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: 20px 28px;
+  text-align: center;
+}
+
+.guide-notice-highlight strong {
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.guide-notice-highlight p {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* 送料テーブル */
+.shipping-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.shipping-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-white);
+  font-size: 0.85rem;
+}
+
+.shipping-table th {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.shipping-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.shipping-table tr:nth-child(even) td {
+  background: var(--color-bg);
+}
+
+.shipping-table tr.area-header td:first-child {
+  font-weight: 700;
+  color: var(--color-primary);
+  background: var(--color-bg-warm);
+}
+
+/* お支払い方法 */
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.payment-method-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.payment-method-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-warm);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+}
+
+.payment-method-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.payment-method-card h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.payment-method-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.card-brands {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.card-brands span {
+  padding: 3px 10px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+/* 保証・返品 */
+.guarantee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.guarantee-item {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.guarantee-item h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-accent);
+  display: inline-block;
+}
+
+.guarantee-item p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+.guarantee-item p:last-child {
+  margin-bottom: 0;
+}
+
+.guarantee-example {
+  background: var(--color-bg-warm);
+  border-left: 3px solid var(--color-accent);
+  padding: 10px 16px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* =============================================
+   お客様の声
+   ============================================= */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+}
+
+.review-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-size: 3rem;
+  color: var(--color-accent-light);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.review-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.review-stars {
+  margin-bottom: 14px;
+}
+
+.review-stars span {
+  color: #FFB300;
+  font-size: 1rem;
+}
+
+.review-text {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.review-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+}
+
+.review-author {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.review-product {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  background: var(--color-bg-warm);
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+/* 送料行のスタイル */
+.order-shipping-row {
+  background: var(--color-bg);
+  margin: 4px -8px;
+  padding: 8px 8px;
+  border-radius: 4px;
+}
+
+.order-shipping-pending {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
 .order-notice {
   background: #FFF8E1;
   border: 1px solid #FFE082;
@@ -1931,6 +2247,61 @@ ul {
 
   .order-item-row {
     font-size: 0.8rem;
+  }
+
+  /* ご利用ガイド */
+  .guide-tabs {
+    max-width: 100%;
+  }
+
+  .guide-tab {
+    font-size: 0.75rem;
+    padding: 10px 12px;
+  }
+
+  .guide-notice-highlight {
+    padding: 16px 20px;
+  }
+
+  .guide-notice-highlight strong {
+    font-size: 1rem;
+  }
+
+  .shipping-table {
+    font-size: 0.75rem;
+  }
+
+  .shipping-table th,
+  .shipping-table td {
+    padding: 8px 10px;
+  }
+
+  .payment-method-card {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .payment-method-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .guarantee-item {
+    padding: 18px;
+  }
+
+  /* お客様の声 */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .review-card {
+    padding: 20px;
+  }
+
+  .review-text {
+    font-size: 0.85rem;
   }
 
   /* FAQ */
