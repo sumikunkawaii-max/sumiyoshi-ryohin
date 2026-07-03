@@ -572,6 +572,19 @@ ul {
 .size-label.m { background: var(--color-m); }
 .size-label.l { background: var(--color-l); }
 
+.size-label-simple {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
 .size-range {
   font-size: 0.9rem;
   color: var(--color-text-light);
