@@ -283,15 +283,15 @@ ul {
 
 .hero-badge {
   display: inline-block;
-  padding: 8px 24px;
+  padding: 14px 40px;
   background: rgba(212, 168, 67, 0.2);
   border: 1px solid rgba(212, 168, 67, 0.4);
   border-radius: 50px;
   color: var(--color-accent-light);
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  margin-bottom: 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 28px;
 }
 
 .hero-title {
@@ -333,13 +333,13 @@ ul {
 
 .btn-primary {
   display: inline-block;
-  padding: 16px 48px;
+  padding: 20px 64px;
   background: var(--color-accent);
   color: var(--color-primary-dark);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 900;
   border-radius: 50px;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   transition: var(--transition);
   box-shadow: 0 4px 20px rgba(212, 168, 67, 0.4);
 }
@@ -1660,26 +1660,26 @@ ul {
 .guide-tabs {
   display: flex;
   justify-content: center;
-  gap: 4px;
-  margin-bottom: 36px;
+  gap: 0;
+  margin-bottom: 40px;
   background: var(--color-white);
-  border-radius: 50px;
-  padding: 4px;
-  max-width: 500px;
+  border-radius: var(--radius-md);
+  padding: 6px;
+  max-width: 560px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .guide-tab {
   flex: 1;
-  padding: 12px 20px;
+  padding: 16px 24px;
   border: none;
   background: none;
-  border-radius: 50px;
+  border-radius: var(--radius-sm);
   font-family: var(--font-main);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--color-text-light);
   cursor: pointer;
   transition: var(--transition);
@@ -1688,9 +1688,11 @@ ul {
 .guide-tab.active {
   background: var(--color-primary);
   color: var(--color-white);
+  box-shadow: var(--shadow-sm);
 }
 
 .guide-tab:hover:not(.active) {
+  background: var(--color-bg-warm);
   color: var(--color-primary);
 }
 
@@ -1709,22 +1711,23 @@ ul {
 .guide-notice-highlight {
   background: linear-gradient(135deg, #FFF8E1, #FFF3C4);
   border: 2px solid var(--color-accent);
-  border-radius: var(--radius-md);
-  padding: 20px 28px;
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
   text-align: center;
 }
 
 .guide-notice-highlight strong {
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   color: var(--color-primary);
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 
 .guide-notice-highlight p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--color-text-light);
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 /* 送料テーブル */
