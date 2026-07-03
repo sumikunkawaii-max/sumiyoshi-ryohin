@@ -619,8 +619,8 @@ ul {
   left: 16px;
   z-index: 10;
   padding: 4px 14px;
-  background: var(--color-l);
-  color: var(--color-white);
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
   font-size: 0.75rem;
   font-weight: 700;
   border-radius: 50px;
@@ -660,10 +660,10 @@ ul {
   box-shadow: var(--shadow-md);
 }
 
-.product-size-tag.ss { background: var(--color-ss); }
-.product-size-tag.s { background: var(--color-s); }
-.product-size-tag.m { background: var(--color-m); }
-.product-size-tag.l { background: var(--color-l); }
+.product-size-tag.ss,
+.product-size-tag.s,
+.product-size-tag.m,
+.product-size-tag.l { background: var(--color-primary); }
 
 .product-info {
   padding: 24px;
@@ -868,6 +868,10 @@ ul {
   box-shadow: var(--shadow-lg);
 }
 
+.about-card-full {
+  grid-template-columns: 1fr;
+}
+
 .about-card-img {
   height: 100%;
 }
@@ -879,7 +883,7 @@ ul {
 }
 
 .about-card-content {
-  padding: 48px 40px 48px 0;
+  padding: 48px 40px;
 }
 
 .about-card-content h3 {
@@ -955,6 +959,16 @@ ul {
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: start;
+}
+
+.shipping-content-full {
+  grid-template-columns: 1fr;
+}
+
+.shipping-content-full .shipping-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .shipping-image {
@@ -1946,26 +1960,6 @@ ul {
   border-radius: 50px;
 }
 
-/* about-card 画像なし版 */
-.about-card-full {
-  grid-template-columns: 1fr;
-}
-
-.about-card-full .about-card-content {
-  padding: 48px;
-}
-
-/* shipping 画像なし版 */
-.shipping-content-full {
-  grid-template-columns: 1fr;
-}
-
-.shipping-content-full .shipping-details {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
 /* 口コミヘッダー（星＋日付） */
 .review-header {
   display: flex;
@@ -1986,6 +1980,12 @@ ul {
   border-radius: var(--radius-lg);
   padding: 36px;
   box-shadow: var(--shadow-sm);
+}
+
+.review-form-note {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
 }
 
 .review-form-title {
@@ -2591,9 +2591,9 @@ ul {
     padding: 18px;
   }
 
-  /* about・発送 画像なし版 */
+  /* about・発送 */
   .about-card-full .about-card-content {
-    padding: 24px;
+    padding: 20px;
   }
 
   .shipping-content-full .shipping-details {

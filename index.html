@@ -688,7 +688,12 @@
       <!-- 口コミ投稿フォーム -->
       <div class="review-form-wrap">
         <h3 class="review-form-title">口コミを投稿する</h3>
+        <p class="review-form-note">当店で商品をご購入いただいたお客様のみ投稿できます。</p>
         <form id="reviewForm" class="review-form">
+          <div class="form-group">
+            <label for="revOrderEmail">ご注文時のメールアドレス <span class="required">必須</span></label>
+            <input type="email" id="revOrderEmail" required placeholder="ご注文時に入力したメールアドレス">
+          </div>
           <div class="form-row">
             <div class="form-group">
               <label for="revName">ニックネーム <span class="required">必須</span></label>
@@ -1364,12 +1369,30 @@
         showToast('評価を選択してください');
         return;
       }
+      const email = document.getElementById('revOrderEmail').value;
       const name = document.getElementById('revName').value;
       const product = document.getElementById('revProduct').value;
       const text = document.getElementById('revText').value;
+
+      // Formsubmitで店舗に口コミ内容を送信（購入者確認用）
+      const formData = new FormData();
+      formData.append('メールアドレス', email);
+      formData.append('ニックネーム', name);
+      formData.append('商品', product);
+      formData.append('評価', selectedRating + '点');
+      formData.append('口コミ内容', text);
+      formData.append('_subject', '【すみよし良品】新しい口コミが投稿されました');
+      formData.append('_captcha', 'false');
+      formData.append('_template', 'table');
+
+      fetch('https://formsubmit.co/ajax/sumiyoshiryouhin@gmail.com', {
+        method: 'POST',
+        body: formData
+      });
+
+      // 画面に即時表示
       const today = new Date();
       const dateStr = today.getFullYear() + '年' + (today.getMonth() + 1) + '月';
-
       const stars = Array.from({length: 5}, (_, i) =>
         '<span>' + (i < selectedRating ? '★' : '☆') + '</span>'
       ).join('');
@@ -1383,7 +1406,7 @@
         '</div>' +
         '<p class="review-text">' + text.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</p>' +
         '<div class="review-meta">' +
-          '<span class="review-author">' + name.replace(/</g, '&lt;').replace(/>/g, '&gt;') + ' 様</span>' +
+          '<span class="review-author">' + name.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</span>' +
           '<span class="review-product">' + product + '</span>' +
         '</div>';
 
@@ -1394,7 +1417,7 @@
         s.textContent = '☆';
         s.classList.remove('active');
       });
-      showToast('口コミを投稿しました。ありがとうございます！');
+      showToast('口コミを投稿しました。確認後に掲載いたします。');
     });
 
     // =============================================
