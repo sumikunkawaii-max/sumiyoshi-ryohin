@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="すみよし良品 - 高品質デュビアの専門店。爬虫類・両生類の餌用デュビアをサイズ別にお届け。オーガニック食材で大切に生育した元気な個体を厳選販売。">
+  <title>すみよし良品 | 高品質デュビア専門店</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="#top">
+          <span class="logo-main">すみよし良品</span>
+          <span class="logo-sub">SUMIYOSHI RYOHIN</span>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#top">トップ</a></li>
+          <li><a href="#products">商品一覧</a></li>
+          <li><a href="#about">当店について</a></li>
+          <li><a href="#merit">デュビアとは</a></li>
+          <li><a href="#shipping">発送方法</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+        </ul>
+      </nav>
+      <!-- カートボタン（ヘッダー） -->
+      <button class="header-cart-btn" id="headerCartBtn" aria-label="カートを開く">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1H5L7.68 14.39C7.77 14.87 8.02 15.31 8.38 15.64C8.74 15.97 9.2 16.15 9.68 16.15H19.4C19.86 16.15 20.3 15.98 20.65 15.68C21 15.38 21.24 14.97 21.32 14.52L23 6H6"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="hero" id="top">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-badge">爬虫類・両生類の餌専門</p>
+      <h1 class="hero-title">すみよし良品</h1>
+      <p class="hero-subtitle">オーガニック食材で育てた<br>高品質デュビアをお届けします</p>
+      <div class="hero-features">
+        <span>栄養満点</span>
+        <span>臭いが少ない</span>
+        <span>元気な個体を厳選</span>
+      </div>
+      <a href="#products" class="btn-primary">商品を見る</a>
+    </div>
+  </section>
+
+  <!-- お知らせバー -->
+  <div class="notice-bar">
+    <div class="container">
+      <p>10種類以上のオーガニック食材で大切に生育。品質の良い元気な個体だけを厳選してお届けします。</p>
+    </div>
+  </div>
+
+  <!-- 商品一覧 -->
+  <section class="section products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">PRODUCTS</span>
+        <h2 class="section-title">商品一覧</h2>
+        <p class="section-desc">用途やペットの大きさに合わせてお選びください</p>
+      </div>
+
+      <div class="size-guide">
+        <h3>サイズの目安</h3>
+        <div class="size-guide-items">
+          <div class="size-guide-item">
+            <span class="size-label ss">SS</span>
+            <span class="size-range">約5mm以下</span>
+          </div>
+          <div class="size-guide-item">
+            <span class="size-label s">S</span>
+            <span class="size-range">約5mm~1.5cm</span>
+          </div>
+          <div class="size-guide-item">
+            <span class="size-label m">M</span>
+            <span class="size-range">約1.5cm~3cm</span>
+          </div>
+          <div class="size-guide-item">
+            <span class="size-label l">L</span>
+            <span class="size-range">約3cm以上</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <!-- SS -->
+        <div class="product-card">
+          <div class="product-badge">人気</div>
+          <div class="product-image">
+            <img src="images/dubia-ss.jpg" alt="デュビア SSサイズ" loading="lazy">
+            <div class="product-size-tag ss">SS</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">デュビア SSサイズ</h3>
+            <p class="product-desc">約5mm以下の幼体。小型ヤモリ・カエルに最適。</p>
+            <div class="product-specs">
+              <span>小型爬虫類向け</span>
+              <span>ベビーフード</span>
+            </div>
+            <div class="product-prices">
+              <div class="price-option" data-name="デュビア SSサイズ 50匹" data-price="1280">
+                <div class="price-option-left">
+                  <span class="qty">50匹</span>
+                  <span class="price">1,280円<small>(税込)</small></span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart('デュビア SSサイズ', '50匹', 1280)">カートに入れる</button>
+              </div>
+              <div class="price-option" data-name="デュビア SSサイズ 100匹" data-price="2180">
+                <div class="price-option-left">
+                  <span class="qty">100匹</span>
+                  <span class="price">2,180円<small>(税込)</small></span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart('デュビア SSサイズ', '100匹', 2180)">カートに入れる</button>
+              </div>
+              <div class="price-option best" data-name="デュビア SSサイズ 200匹" data-price="3980">
+                <div class="price-option-left">
+                  <span class="qty">200匹</span>
+                  <span class="price">3,980円<small>(税込)</small></span>
+                  <span class="price-badge">お得</span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart('デュビア SSサイズ', '200匹', 3980)">カートに入れる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- S -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/dubia-s.jpg" alt="デュビア Sサイズ" loading="lazy">
+            <div class="product-size-tag s">S</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">デュビア Sサイズ</h3>
+            <p class="product-desc">約5mm~1.5cm。レオパ・小型トカゲに人気。</p>
+            <div class="product-specs">
+              <span>レオパ向け</span>
+              <span>小型トカゲ</span>
+            </div>
+            <div class="product-prices">
+              <div class="price-option">
+                <div class="price-option-left">
+                  <span class="qty">50匹</span>
+                  <span class="price">1,480円<small>(税込)</small></span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart('デュビア Sサイズ', '50匹', 1480)">カートに入れる</button>
+              </div>
+              <div class="price-option">
+                <div class="price-option-left">
+                  <span class="qty">100匹</span>
+                  <span class="price">2,580円<small>(税込)</small></span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart('デュビア Sサイズ', '100匹', 2580)">カートに入れる</button>
+              </div>
+              <div class="price-option best">
+                <div class="price-option-left">
+                  <span class="qty">200匹</span>
+                  <span class="price">4,580円<small>(税込)</small></span>
+                  <span class="price-badge">お得</span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart('デュビア Sサイズ', '200匹', 4580)">カートに入れる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- M -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/dubia-m.jpg" alt="デュビア Mサイズ" loading="lazy">
+            <div class="product-size-tag m">M</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">デュビア Mサイズ</h3>
+            <p class="product-desc">約1.5cm~3cm。フトアゴ・中型トカゲの主食に。</p>
+            <div class="product-specs">
+              <span>フトアゴ向け</span>
+              <span>中型爬虫類</span>
+            </div>
+            <div class="product-prices">
+              <div class="price-option">
+                <div class="price-option-left">
+                  <span class="qty">50匹</span>
+                  <span class="price">1,980円<small>(税込)</small></span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart('デュビア Mサイズ', '50匹', 1980)">カートに入れる</button>
+              </div>
+              <div class="price-option">
+                <div class="price-option-left">
+                  <span class="qty">100匹</span>
+                  <span class="price">3,480円<small>(税込)</small></span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart('デュビア Mサイズ', '100匹', 3480)">カートに入れる</button>
+              </div>
+              <div class="price-option best">
+                <div class="price-option-left">
+                  <span class="qty">200匹</span>
+                  <span class="price">5,980円<small>(税込)</small></span>
+                  <span class="price-badge">お得</span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart('デュビア Mサイズ', '200匹', 5980)">カートに入れる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- L -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/dubia-l.jpg" alt="デュビア Lサイズ" loading="lazy">
+            <div class="product-size-tag l">L</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">デュビア Lサイズ</h3>
+            <p class="product-desc">約3cm以上の成体。大型爬虫類の食べ応えに。</p>
+            <div class="product-specs">
+              <span>大型爬虫類向け</span>
+              <span>成体サイズ</span>
+            </div>
+            <div class="product-prices">
+              <div class="price-option">
+                <div class="price-option-left">
+                  <span class="qty">30匹</span>
+                  <span class="price">1,780円<small>(税込)</small></span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart('デュビア Lサイズ', '30匹', 1780)">カートに入れる</button>
+              </div>
+              <div class="price-option">
+                <div class="price-option-left">
+                  <span class="qty">50匹</span>
+                  <span class="price">2,780円<small>(税込)</small></span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart('デュビア Lサイズ', '50匹', 2780)">カートに入れる</button>
+              </div>
+              <div class="price-option best">
+                <div class="price-option-left">
+                  <span class="qty">100匹</span>
+                  <span class="price">4,980円<small>(税込)</small></span>
+                  <span class="price-badge">お得</span>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart('デュビア Lサイズ', '100匹', 4980)">カートに入れる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- デュビアの良い所 -->
+  <section class="section merit-section" id="merit">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">MERIT</span>
+        <h2 class="section-title">デュビアの良い所</h2>
+        <p class="section-desc">餌昆虫の中でも特に優れた特徴を持っています</p>
+      </div>
+
+      <div class="merit-grid">
+        <div class="merit-card">
+          <div class="merit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          </div>
+          <h3>栄養満点</h3>
+          <p>高たんぱく質・低脂肪でバランスが良い。ペットの健康的な成長をサポートします。</p>
+        </div>
+        <div class="merit-card">
+          <div class="merit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14"/><path d="M9 9H9.01"/><path d="M15 9H15.01"/></svg>
+          </div>
+          <h3>臭いが少ない</h3>
+          <p>飼育時の不快な臭いがほとんどない。室内飼育でもストレスフリーです。</p>
+        </div>
+        <div class="merit-card">
+          <div class="merit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><path d="M12 6V12L16 14"/></svg>
+          </div>
+          <h3>動きが鈍い</h3>
+          <p>捕まえやすく、ペットにストレスを与えにくい。給餌がとても楽です。</p>
+        </div>
+        <div class="merit-card">
+          <div class="merit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61C20.3292 4.099 19.7228 3.69365 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69365 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.93789 22.4518 9.22249 22.4518 8.5C22.4518 7.77751 22.3095 7.0621 22.0329 6.39464C21.7563 5.72718 21.351 5.12075 20.84 4.61Z"/></svg>
+          </div>
+          <h3>寿命が長い</h3>
+          <p>他の餌昆虫よりも長く生きるため管理が楽。ストック飼育にも最適です。</p>
+        </div>
+      </div>
+
+      <div class="merit-image-section">
+        <img src="images/info-merit.jpg" alt="デュビアの良い所 詳細" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- 当店のデュビア -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">OUR QUALITY</span>
+        <h2 class="section-title">当店のデュビア</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-card-img">
+            <img src="images/info-quality.jpg" alt="当店のデュビアについて" loading="lazy">
+          </div>
+          <div class="about-card-content">
+            <h3>こだわりの飼育</h3>
+            <div class="about-points">
+              <div class="about-point">
+                <div class="point-number">01</div>
+                <div class="point-text">
+                  <h4>オーガニック食材で生育</h4>
+                  <p>10種類以上の栄養満点のオーガニック食材を使用し、大切に生育いたしました。栄養価の高いデュビアをお届けします。</p>
+                </div>
+              </div>
+              <div class="about-point">
+                <div class="point-number">02</div>
+                <div class="point-text">
+                  <h4>厳選された個体</h4>
+                  <p>沢山の個体の中から品質が良く元気な個体を選別しております。健康で活きの良いデュビアだけをお届けします。</p>
+                </div>
+              </div>
+              <div class="about-point">
+                <div class="point-number">03</div>
+                <div class="point-text">
+                  <h4>徹底した品質管理</h4>
+                  <p>適切な温度・湿度管理のもとで飼育。清潔な環境を維持し、高品質なデュビアを安定してご提供しています。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 発送方法 -->
+  <section class="section shipping-section" id="shipping">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">SHIPPING</span>
+        <h2 class="section-title">発送方法</h2>
+        <p class="section-desc">大切な生体を安全にお届けするために</p>
+      </div>
+
+      <div class="shipping-content">
+        <div class="shipping-image">
+          <img src="images/info-shipping.jpg" alt="発送方法の詳細" loading="lazy">
+        </div>
+
+        <div class="shipping-details">
+          <div class="shipping-item">
+            <div class="shipping-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8C20.9996 7.64928 20.9071 7.30481 20.7315 7.00116C20.556 6.69752 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69752 3.26846 7.00116C3.09294 7.30481 3.00036 7.64928 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.998 12 21.998C12.3511 21.998 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z"/></svg>
+            </div>
+            <div>
+              <h4>専用の梱包</h4>
+              <p>専用の梱包袋にデュビア・デュビアのご飯・デュビアの隠れ家を同梱してお送りいたします。</p>
+            </div>
+          </div>
+          <div class="shipping-item">
+            <div class="shipping-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><path d="M12 6V12L16 14"/></svg>
+            </div>
+            <div>
+              <h4>季節に合わせた発送</h4>
+              <p>季節に合わせた発送方法を採用しております。夏場・冬場の温度対策も万全です。</p>
+            </div>
+          </div>
+          <div class="shipping-item">
+            <div class="shipping-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18457 2.99721 7.13633 4.39828 5.49707C5.79935 3.85782 7.69278 2.71538 9.79619 2.24015C11.8996 1.76491 14.1003 1.98234 16.07 2.86"/><path d="M22 4L12 14.01L9 11.01"/></svg>
+            </div>
+            <div>
+              <h4>届いたらすぐ取り出して</h4>
+              <p>通常郵便受けへの配達になります。長時間放置するとデュビアが死んでしまう恐れがございます。届きましたらプラケースに移してください。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- よくある質問 -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">よくある質問</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>デュビアはどのくらいの頻度で餌をあげればいいですか？</summary>
+          <p>2~3日に1回程度、野菜くずやラビットフードを与えてください。水分は野菜から摂取しますので、水入れは不要です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>デュビアの飼育に適した温度は？</summary>
+          <p>25~30度が理想的です。冬場はパネルヒーターなどで保温してください。20度以下になると活動が鈍り、繁殖も止まります。</p>
+        </details>
+        <details class="faq-item">
+          <summary>死着保証はありますか？</summary>
+          <p>はい。到着時に死着があった場合は、到着日中にご連絡ください。写真確認の上、補償対応いたします。</p>
+        </details>
+        <details class="faq-item">
+          <summary>どのサイズを選べばいいですか？</summary>
+          <p>ペットの頭の幅より小さいサイズが目安です。レオパのベビーにはSS~S、アダルトにはS~M、フトアゴにはM~Lがおすすめです。</p>
+        </details>
+        <details class="faq-item">
+          <summary>デュビアは脱走しませんか？</summary>
+          <p>デュビアはツルツルした面を登れないため、プラスチックケースで飼育すれば脱走の心配はありません。蓋があるとより安心です。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">すみよし良品</div>
+          <p class="footer-desc">高品質デュビアの専門店。<br>大切なペットに最高の栄養を。</p>
+        </div>
+        <div class="footer-links">
+          <h4>メニュー</h4>
+          <ul>
+            <li><a href="#top">トップ</a></li>
+            <li><a href="#products">商品一覧</a></li>
+            <li><a href="#about">当店について</a></li>
+            <li><a href="#shipping">発送方法</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>ご案内</h4>
+          <ul>
+            <li><a href="#faq">よくある質問</a></li>
+            <li><a href="#shipping">配送について</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 すみよし良品 All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       カートサイドパネル
+       ======================================== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-panel-header">
+      <h3>ショッピングカート</h3>
+      <button class="cart-close" id="cartClose" aria-label="カートを閉じる">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18"/><path d="M6 6L18 18"/></svg>
+      </button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <!-- カートが空の場合 -->
+      <div class="cart-empty" id="cartEmpty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1H5L7.68 14.39C7.77 14.87 8.02 15.31 8.38 15.64C8.74 15.97 9.2 16.15 9.68 16.15H19.4C19.86 16.15 20.3 15.98 20.65 15.68C21 15.38 21.24 14.97 21.32 14.52L23 6H6"/></svg>
+        <p>カートに商品がありません</p>
+      </div>
+    </div>
+
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>合計（税込）</span>
+        <span class="cart-total-price" id="cartTotalPrice">0円</span>
+      </div>
+      <button class="btn-checkout" id="btnCheckout">注文手続きへ進む</button>
+      <button class="btn-continue" onclick="closeCart()">買い物を続ける</button>
+    </div>
+  </div>
+
+  <!-- ========================================
+       注文フォームモーダル
+       ======================================== -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal" id="orderModal">
+    <div class="modal-header">
+      <h3>ご注文内容の確認</h3>
+      <button class="modal-close" id="modalClose" aria-label="閉じる">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18"/><path d="M6 6L18 18"/></svg>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <!-- 注文内容の表示 -->
+      <div class="order-summary" id="orderSummary"></div>
+
+      <!-- 注文フォーム -->
+      <form id="orderForm" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+        <!-- FormSubmit設定 -->
+        <input type="hidden" name="_subject" value="【すみよし良品】新しいご注文が入りました">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" id="formNext" value="">
+        <input type="hidden" name="注文内容" id="orderDetails" value="">
+
+        <h4 class="form-section-title">お客様情報</h4>
+
+        <div class="form-group">
+          <label for="orderName">お名前 <span class="required">必須</span></label>
+          <input type="text" id="orderName" name="お名前" required placeholder="山田 太郎">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="orderEmail">メールアドレス <span class="required">必須</span></label>
+            <input type="email" id="orderEmail" name="メールアドレス" required placeholder="example@email.com">
+          </div>
+          <div class="form-group">
+            <label for="orderPhone">電話番号</label>
+            <input type="tel" id="orderPhone" name="電話番号" placeholder="090-1234-5678">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="orderZip">郵便番号 <span class="required">必須</span></label>
+          <input type="text" id="orderZip" name="郵便番号" required placeholder="123-4567" pattern="\d{3}-?\d{4}">
+        </div>
+
+        <div class="form-group">
+          <label for="orderAddress">ご住所 <span class="required">必須</span></label>
+          <input type="text" id="orderAddress" name="ご住所" required placeholder="東京都渋谷区...">
+        </div>
+
+        <div class="form-group">
+          <label for="orderPayment">お支払い方法 <span class="required">必須</span></label>
+          <select id="orderPayment" name="お支払い方法" required>
+            <option value="">選択してください</option>
+            <option value="銀行振込">銀行振込</option>
+            <option value="PayPay">PayPay</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="orderNote">備考・ご要望</label>
+          <textarea id="orderNote" name="備考" rows="3" placeholder="配達日時のご希望などがあればご記入ください"></textarea>
+        </div>
+
+        <div class="order-notice">
+          <p>ご注文後、確認メールをお送りいたします。お支払い確認後、1~3営業日以内に発送いたします。</p>
+        </div>
+
+        <button type="submit" class="btn-order">注文を確定する</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- カートに追加した時の通知 -->
+  <div class="toast" id="toast">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18457 2.99721 7.13633 4.39828 5.49707C5.79935 3.85782 7.69278 2.71538 9.79619 2.24015C11.8996 1.76491 14.1003 1.98234 16.07 2.86"/><path d="M22 4L12 14.01L9 11.01"/></svg>
+    <span id="toastMessage">カートに追加しました</span>
+  </div>
+
+  <!-- トップに戻るボタン -->
+  <button class="scroll-top" id="scrollTop" aria-label="トップに戻る">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15L12 9L6 15"/></svg>
+  </button>
+
+  <script>
+    // =============================================
+    // カートシステム
+    // =============================================
+    let cart = [];
+
+    // カートに追加
+    function addToCart(name, qty, price) {
+      // 同じ商品があれば数量を増やす
+      const key = name + ' ' + qty;
+      const existing = cart.find(item => item.key === key);
+      if (existing) {
+        existing.count += 1;
+      } else {
+        cart.push({ key: key, name: name, qty: qty, price: price, count: 1 });
+      }
+      updateCartUI();
+      showToast(name + ' ' + qty + ' をカートに追加しました');
+    }
+
+    // カートから削除
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    // カート数量変更
+    function updateCount(index, delta) {
+      cart[index].count += delta;
+      if (cart[index].count <= 0) {
+        cart.splice(index, 1);
+      }
+      updateCartUI();
+    }
+
+    // カートUI更新
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, item) => sum + item.count, 0);
+      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.count), 0);
+
+      // ヘッダーのカート数
+      document.getElementById('cartCount').textContent = totalItems;
+      document.getElementById('cartCount').classList.toggle('has-items', totalItems > 0);
+
+      // カートパネル内容
+      const cartItemsEl = document.getElementById('cartItems');
+      const cartEmptyEl = document.getElementById('cartEmpty');
+      const cartFooterEl = document.getElementById('cartFooter');
+
+      if (cart.length === 0) {
+        cartEmptyEl.style.display = 'flex';
+        cartFooterEl.style.display = 'none';
+        // カートアイテムの表示をクリア（空メッセージ以外）
+        const items = cartItemsEl.querySelectorAll('.cart-item');
+        items.forEach(item => item.remove());
+      } else {
+        cartEmptyEl.style.display = 'none';
+        cartFooterEl.style.display = 'block';
+
+        // アイテムを再描画
+        const items = cartItemsEl.querySelectorAll('.cart-item');
+        items.forEach(item => item.remove());
+
+        cart.forEach((item, index) => {
+          const div = document.createElement('div');
+          div.className = 'cart-item';
+          div.innerHTML =
+            '<div class="cart-item-info">' +
+              '<div class="cart-item-name">' + item.name + '</div>' +
+              '<div class="cart-item-qty">' + item.qty + '</div>' +
+              '<div class="cart-item-price">' + (item.price * item.count).toLocaleString() + '円</div>' +
+            '</div>' +
+            '<div class="cart-item-actions">' +
+              '<div class="qty-control">' +
+                '<button onclick="updateCount(' + index + ', -1)" aria-label="減らす">-</button>' +
+                '<span>' + item.count + '</span>' +
+                '<button onclick="updateCount(' + index + ', 1)" aria-label="増やす">+</button>' +
+              '</div>' +
+              '<button class="cart-item-remove" onclick="removeFromCart(' + index + ')" aria-label="削除">' +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6H5H21"/><path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"/></svg>' +
+              '</button>' +
+            '</div>';
+          cartItemsEl.appendChild(div);
+        });
+
+        document.getElementById('cartTotalPrice').textContent = totalPrice.toLocaleString() + '円';
+      }
+    }
+
+    // カートを開く/閉じる
+    function openCart() {
+      document.getElementById('cartPanel').classList.add('open');
+      document.getElementById('cartOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCart() {
+      document.getElementById('cartPanel').classList.remove('open');
+      document.getElementById('cartOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // トースト通知
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastMessage').textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    // イベントリスナー
+    document.getElementById('headerCartBtn').addEventListener('click', openCart);
+    document.getElementById('cartClose').addEventListener('click', closeCart);
+    document.getElementById('cartOverlay').addEventListener('click', closeCart);
+
+    // =============================================
+    // 注文フォームモーダル
+    // =============================================
+    function openOrderModal() {
+      closeCart();
+
+      // 注文内容をまとめる
+      const summaryEl = document.getElementById('orderSummary');
+      let summaryHTML = '<h4 class="form-section-title">ご注文内容</h4><div class="order-items-list">';
+      let orderText = '';
+      let total = 0;
+
+      cart.forEach(item => {
+        const subtotal = item.price * item.count;
+        total += subtotal;
+        summaryHTML +=
+          '<div class="order-item-row">' +
+            '<span class="order-item-name">' + item.name + ' ' + item.qty + (item.count > 1 ? ' x' + item.count : '') + '</span>' +
+            '<span class="order-item-price">' + subtotal.toLocaleString() + '円</span>' +
+          '</div>';
+        orderText += item.name + ' ' + item.qty + ' x' + item.count + ' = ' + subtotal.toLocaleString() + '円\n';
+      });
+
+      summaryHTML +=
+        '<div class="order-total-row">' +
+          '<span>合計（税込）</span>' +
+          '<span class="order-total-price">' + total.toLocaleString() + '円</span>' +
+        '</div></div>';
+      orderText += '---\n合計: ' + total.toLocaleString() + '円（税込）';
+
+      summaryEl.innerHTML = summaryHTML;
+      document.getElementById('orderDetails').value = orderText;
+
+      // 現在のページURLをサンクスページに設定
+      const currentUrl = window.location.href.split('#')[0];
+      document.getElementById('formNext').value = currentUrl + '?ordered=true';
+
+      document.getElementById('orderModal').classList.add('open');
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeOrderModal() {
+      document.getElementById('orderModal').classList.remove('open');
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('btnCheckout').addEventListener('click', openOrderModal);
+    document.getElementById('modalClose').addEventListener('click', closeOrderModal);
+    document.getElementById('modalOverlay').addEventListener('click', closeOrderModal);
+
+    // 注文完了後のリダイレクト確認
+    if (window.location.search.includes('ordered=true')) {
+      cart = [];
+      updateCartUI();
+      setTimeout(() => {
+        showToast('ご注文ありがとうございます。確認メールをお送りいたします。');
+      }, 500);
+      // URLからパラメータを消す
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+    // =============================================
+    // ハンバーガーメニュー
+    // =============================================
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+      });
+    });
+
+    // =============================================
+    // ヘッダーのスクロール制御
+    // =============================================
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // スクロールトップボタン
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 500) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // スムーススクロール
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerHeight = header.offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // スクロールアニメーション
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.product-card, .merit-card, .about-point, .shipping-item, .faq-item').forEach(el => {
+      el.classList.add('animate-target');
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
