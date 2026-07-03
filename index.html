@@ -536,21 +536,32 @@
 
         <div class="form-group">
           <label for="orderZip">郵便番号 <span class="required">必須</span></label>
-          <input type="text" id="orderZip" name="郵便番号" required placeholder="123-4567" pattern="\d{3}-?\d{4}">
+          <div class="zip-row">
+            <input type="text" id="orderZip" name="郵便番号" required placeholder="123-4567" pattern="\d{3}-?\d{4}" maxlength="8">
+            <button type="button" class="btn-zip-search" id="btnZipSearch">住所検索</button>
+          </div>
+          <p class="zip-hint" id="zipHint"></p>
         </div>
 
         <div class="form-group">
           <label for="orderAddress">ご住所 <span class="required">必須</span></label>
-          <input type="text" id="orderAddress" name="ご住所" required placeholder="東京都渋谷区...">
+          <input type="text" id="orderAddress" name="ご住所" required placeholder="郵便番号を入力すると自動で入ります">
+        </div>
+
+        <div class="form-group">
+          <label for="orderAddress2">建物名・部屋番号</label>
+          <input type="text" id="orderAddress2" name="建物名" placeholder="マンション名 101号室など">
         </div>
 
         <div class="form-group">
           <label for="orderPayment">お支払い方法 <span class="required">必須</span></label>
           <select id="orderPayment" name="お支払い方法" required>
             <option value="">選択してください</option>
+            <option value="クレジットカード">クレジットカード</option>
             <option value="銀行振込">銀行振込</option>
             <option value="PayPay">PayPay</option>
           </select>
+          <p class="payment-hint" id="paymentHint"></p>
         </div>
 
         <div class="form-group">
@@ -744,6 +755,90 @@
     document.getElementById('btnCheckout').addEventListener('click', openOrderModal);
     document.getElementById('modalClose').addEventListener('click', closeOrderModal);
     document.getElementById('modalOverlay').addEventListener('click', closeOrderModal);
+
+    // =============================================
+    // 郵便番号 → 住所自動入力
+    // =============================================
+    function handleZipResult(data) {
+      const hint = document.getElementById('zipHint');
+      if (data.results) {
+        const r = data.results[0];
+        const address = r.address1 + r.address2 + r.address3;
+        document.getElementById('orderAddress').value = address;
+        hint.textContent = '住所を自動入力しました';
+        hint.className = 'zip-hint zip-success';
+        // 建物名の入力欄にフォーカス
+        document.getElementById('orderAddress2').focus();
+      } else {
+        hint.textContent = '該当する住所が見つかりませんでした';
+        hint.className = 'zip-hint zip-error';
+      }
+    }
+    // グローバルに公開（JSONP用）
+    window.handleZipResult = handleZipResult;
+
+    function searchZip() {
+      const zipInput = document.getElementById('orderZip');
+      const zip = zipInput.value.replace(/[^0-9]/g, '');
+      const hint = document.getElementById('zipHint');
+
+      if (zip.length !== 7) {
+        hint.textContent = '郵便番号は7桁で入力してください';
+        hint.className = 'zip-hint zip-error';
+        return;
+      }
+
+      hint.textContent = '検索中...';
+      hint.className = 'zip-hint';
+
+      const script = document.createElement('script');
+      script.src = 'https://zipcloud.ibsnet.co.jp/api/search?zipcode=' + zip + '&callback=handleZipResult';
+      document.body.appendChild(script);
+      script.onload = function() { document.body.removeChild(script); };
+      script.onerror = function() {
+        hint.textContent = '検索に失敗しました。手動で入力してください';
+        hint.className = 'zip-hint zip-error';
+        document.body.removeChild(script);
+      };
+    }
+
+    document.getElementById('btnZipSearch').addEventListener('click', searchZip);
+
+    // 郵便番号入力時に自動でハイフン挿入 & 7桁で自動検索
+    document.getElementById('orderZip').addEventListener('input', function() {
+      let val = this.value.replace(/[^0-9]/g, '');
+      if (val.length > 3) {
+        val = val.slice(0, 3) + '-' + val.slice(3, 7);
+      }
+      this.value = val;
+      if (val.replace('-', '').length === 7) {
+        searchZip();
+      }
+    });
+
+    // =============================================
+    // 支払い方法の選択で案内を表示
+    // =============================================
+    document.getElementById('orderPayment').addEventListener('change', function() {
+      const hint = document.getElementById('paymentHint');
+      switch (this.value) {
+        case 'クレジットカード':
+          hint.textContent = 'ご注文確定後、決済用リンクをメールでお送りいたします。';
+          hint.className = 'payment-hint payment-info';
+          break;
+        case '銀行振込':
+          hint.textContent = 'ご注文確定後、振込先をメールでお送りいたします。';
+          hint.className = 'payment-hint payment-info';
+          break;
+        case 'PayPay':
+          hint.textContent = 'ご注文確定後、PayPay送金先をメールでお送りいたします。';
+          hint.className = 'payment-hint payment-info';
+          break;
+        default:
+          hint.textContent = '';
+          hint.className = 'payment-hint';
+      }
+    });
 
     // 注文完了後のリダイレクト確認
     if (window.location.search.includes('ordered=true')) {
