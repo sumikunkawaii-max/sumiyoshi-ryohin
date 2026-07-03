@@ -367,6 +367,15 @@
         <div class="shipping-details">
           <div class="shipping-item">
             <div class="shipping-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div>
+              <h4>ヤマト運輸（宅急便）でお届け</h4>
+              <p>全国配送対応。追跡番号付きで、配達状況をいつでも確認できます。日時指定も可能です。</p>
+            </div>
+          </div>
+          <div class="shipping-item">
+            <div class="shipping-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8C20.9996 7.64928 20.9071 7.30481 20.7315 7.00116C20.556 6.69752 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69752 3.26846 7.00116C3.09294 7.30481 3.00036 7.64928 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.998 12 21.998C12.3511 21.998 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z"/></svg>
             </div>
             <div>
@@ -380,7 +389,7 @@
             </div>
             <div>
               <h4>季節に合わせた発送</h4>
-              <p>季節に合わせた発送方法を採用しております。夏場・冬場の温度対策も万全です。</p>
+              <p>夏場は保冷剤、冬場はカイロを同梱し、温度対策を万全にしてお届けします。</p>
             </div>
           </div>
           <div class="shipping-item">
@@ -389,7 +398,7 @@
             </div>
             <div>
               <h4>届いたらすぐ取り出して</h4>
-              <p>通常郵便受けへの配達になります。長時間放置するとデュビアが死んでしまう恐れがございます。届きましたらプラケースに移してください。</p>
+              <p>対面でのお届けになります。受け取り後はすぐにプラスチックケースに移して保管してください。</p>
             </div>
           </div>
         </div>
@@ -738,9 +747,27 @@
           <p class="payment-hint" id="paymentHint"></p>
         </div>
 
+        <div class="form-row">
+          <div class="form-group">
+            <label for="orderDate">配達希望日</label>
+            <input type="date" id="orderDate" name="配達希望日" min="">
+          </div>
+          <div class="form-group">
+            <label for="orderTime">配達時間帯</label>
+            <select id="orderTime" name="配達時間帯">
+              <option value="指定なし">指定なし</option>
+              <option value="午前中">午前中</option>
+              <option value="14時〜16時">14時〜16時</option>
+              <option value="16時〜18時">16時〜18時</option>
+              <option value="18時〜20時">18時〜20時</option>
+              <option value="19時〜21時">19時〜21時</option>
+            </select>
+          </div>
+        </div>
+
         <div class="form-group">
           <label for="orderNote">備考・ご要望</label>
-          <textarea id="orderNote" name="備考" rows="3" placeholder="配達日時のご希望などがあればご記入ください"></textarea>
+          <textarea id="orderNote" name="備考" rows="3" placeholder="その他ご要望があればご記入ください"></textarea>
         </div>
 
         <div class="order-notice">
@@ -1192,6 +1219,14 @@
         }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    // 配達希望日の最小値を3日後に設定
+    const dateInput = document.getElementById('orderDate');
+    if (dateInput) {
+      const minDate = new Date();
+      minDate.setDate(minDate.getDate() + 3);
+      dateInput.min = minDate.toISOString().split('T')[0];
+    }
 
     document.querySelectorAll('.product-card, .merit-card, .about-point, .shipping-item, .faq-item').forEach(el => {
       el.classList.add('animate-target');
