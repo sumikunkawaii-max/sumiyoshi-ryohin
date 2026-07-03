@@ -1825,6 +1825,55 @@ ul {
   font-weight: 400;
 }
 
+/* =============================================
+   特定商取引法テーブル
+   ============================================= */
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.legal-table th,
+.legal-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal-table th {
+  background: var(--color-bg-warm);
+  font-weight: 700;
+  color: var(--color-primary);
+  width: 200px;
+  white-space: nowrap;
+}
+
+.legal-table tr:last-child th,
+.legal-table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .legal-table th,
+  .legal-table td {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+  }
+
+  .legal-table th {
+    border-bottom: none;
+    padding-bottom: 4px;
+  }
+}
+
 .order-notice {
   background: #FFF8E1;
   border: 1px solid #FFE082;
