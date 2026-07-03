@@ -1811,6 +1811,96 @@ ul {
   border-radius: 50px;
 }
 
+/* about-card 画像なし版 */
+.about-card-full {
+  grid-template-columns: 1fr;
+}
+
+.about-card-full .about-card-content {
+  padding: 48px;
+}
+
+/* shipping 画像なし版 */
+.shipping-content-full {
+  grid-template-columns: 1fr;
+}
+
+.shipping-content-full .shipping-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* 口コミヘッダー（星＋日付） */
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.review-date {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* 口コミ投稿フォーム */
+.review-form-wrap {
+  margin-top: 48px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+}
+
+.review-form-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.star-rating {
+  display: flex;
+  gap: 4px;
+}
+
+.star-rating span {
+  font-size: 1.6rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  user-select: none;
+}
+
+.star-rating span.active,
+.star-rating span:hover {
+  color: #FFB300;
+}
+
+.btn-review-submit {
+  padding: 14px 36px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 1px;
+}
+
+.btn-review-submit:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
 /* 送料行のスタイル */
 .order-shipping-row {
   background: var(--color-bg);
@@ -2339,10 +2429,23 @@ ul {
     padding: 18px;
   }
 
+  /* about・発送 画像なし版 */
+  .about-card-full .about-card-content {
+    padding: 24px;
+  }
+
+  .shipping-content-full .shipping-details {
+    grid-template-columns: 1fr;
+  }
+
   /* お客様の声 */
   .reviews-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .review-form-wrap {
+    padding: 24px;
   }
 
   .review-card {
